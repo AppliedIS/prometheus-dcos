@@ -33,7 +33,7 @@
           }
         ],
         "docker": {
-          "image": "lloesche/prometheus-dcos",
+          "image": "appliedis/prometheus-dcos:0.0.1",
           "forcePullImage": true,
           "network": "BRIDGE",
           "portMappings": [
@@ -75,10 +75,10 @@
       ],
       "fetch": [
         {
-          "uri": "https://github.com/prometheus/node_exporter/releases/download/0.12.0/node_exporter-0.12.0.linux-amd64.tar.gz"
+          "uri": "https://github.com/prometheus/node_exporter/releases/download/0.13.0/node_exporter-0.13.0.linux-amd64.tar.gz"
         }
       ],
-      "cmd": "node_exporter-0.12.0.linux-amd64/node_exporter -web.listen-address :$PORT",
+      "cmd": "node_exporter-0.13.0.linux-amd64/node_exporter -web.listen-address :$PORT",
       "constraints": [
         [
           "hostname",
@@ -110,7 +110,7 @@
       ],
       "container": {
         "docker": {
-          "image": "google/cadvisor",
+          "image": "google/cadvisor:v0.24.1",
           "portMappings": [
             {
               "containerPort": 8080,
@@ -231,7 +231,7 @@
           }
         ],
         "docker": {
-          "image": "lloesche/prometheus-grafana-dcos",
+          "image": "appliedis/prometheus-grafana-dcos:0.0.1",
           "forcePullImage": true,
           "network": "BRIDGE",
           "portMappings": [

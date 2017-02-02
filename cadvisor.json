@@ -11,7 +11,7 @@
   ],
   "container": {
     "docker": {
-      "image": "google/cadvisor",
+      "image": "google/cadvisor:v0.24.1",
       "portMappings": [
         {
           "containerPort": 8080,

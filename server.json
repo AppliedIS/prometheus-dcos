@@ -28,7 +28,7 @@
       }
     ],
     "docker": {
-      "image": "lloesche/prometheus-dcos",
+      "image": "appliedis/prometheus-dcos:0.0.1",
       "forcePullImage": true,
       "network": "BRIDGE",
       "portMappings": [
