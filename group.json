@@ -10,7 +10,7 @@
         0
       ],
       "env": {
-        "EXTERNAL_URI": "https://monitoring.example.com/",
+        "EXTERNAL_URI": "https://prometheus.dcos.aisohio.net/",
         "NODE_EXPORTER_SRV": "_node-exporter.prometheus._tcp.marathon.mesos",
         "CADVISOR_SRV": "_cadvisor.prometheus._tcp.marathon.mesos",
         "PAGERDUTY_HIGH_PRIORITY_KEY": "d230f2398hf293h2304f304j343f0j34",
@@ -190,12 +190,12 @@
         }
       ],
       "labels": {
-        "HAPROXY_0_VHOST": "mon.example.com",
+        "HAPROXY_0_VHOST": "prometheus.dcos.aisohio.net",
         "HAPROXY_GROUP": "external"
       },
       "env": {
-        "LOGIN": "monitoring",
-        "PASSWORD": "{PLAIN}changeme",
+        "LOGIN": "admin",
+        "PASSWORD": "{PLAIN}chdffngeme",
         "LOCATION": "/",
         "PROXY_PASS": "http://prometheusserver.marathon.l4lb.thisdcos.directory:9090/"
       }
@@ -210,13 +210,13 @@
       ],
       "env": {
         "GF_PATHS_DATA": "/mnt/mesos/sandbox/grafana",
-        "GF_SERVER_ROOT_URL": "https://mondash.example.com",
-        "GF_SECURITY_ADMIN_USER": "someadmin",
+        "GF_SERVER_ROOT_URL": "https://grafana.dcos.aisohio.net",
+        "GF_SECURITY_ADMIN_USER": "admin",
         "GF_SECURITY_ADMIN_PASSWORD": "somepassword",
         "PROMETHEUS_URI": "http://prometheusserver.marathon.l4lb.thisdcos.directory:9090/"
       },
       "labels": {
-        "HAPROXY_0_VHOST": "mondash.example.com",
+        "HAPROXY_0_VHOST": "grafana.dcos.aisohio.net",
         "HAPROXY_GROUP": "external"
       },
       "container": {
