@@ -75,7 +75,7 @@
       ],
       "fetch": [
         {
-          "uri": "https://github.com/prometheus/node_exporter/releases/download/0.13.0/node_exporter-0.13.0.linux-amd64.tar.gz"
+          "uri": "https://github.com/prometheus/node_exporter/releases/download/v0.13.0/node_exporter-0.13.0.linux-amd64.tar.gz"
         }
       ],
       "cmd": "node_exporter-0.13.0.linux-amd64/node_exporter -web.listen-address :$PORT",
@@ -195,7 +195,7 @@
       },
       "env": {
         "LOGIN": "admin",
-        "PASSWORD": "{PLAIN}chdffngeme",
+        "PASSWORD": "{PLAIN}somepassword",
         "LOCATION": "/",
         "PROXY_PASS": "http://prometheusserver.marathon.l4lb.thisdcos.directory:9090/"
       }
@@ -231,7 +231,7 @@
           }
         ],
         "docker": {
-          "image": "appliedis/prometheus-grafana-dcos:0.0.1",
+          "image": "appliedis/prometheus-grafana-dcos:0.0.2",
           "forcePullImage": true,
           "network": "BRIDGE",
           "portMappings": [
